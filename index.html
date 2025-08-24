@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alessandra Corrêa — Currículo</title>
+  <meta name="description" content="Currículo de Alessandra Corrêa — Desenvolvedor Front-end. Contato, habilidades, experiência e projetos.">
+  <meta name="author" content="Alessandra Corrêa">
+
+  <!-- SEO Open Graph -->
+  <meta property="og:title" content="Alessandra Corrêa - Currículo Online" />
+  <meta property="og:description" content="Currículo profissional de Desenvolvedor Front-end, com experiência, habilidades e projetos." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="                " />
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/179221331?v=4" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Fonte Google e Ícones -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" />
+
+  <style>
+    :root {
+      --bg: #53b9fd;
+      --card: #ffffff;
+      --muted: #000000;
+      --accent: #15acac;
+      --accent-2: #823fc0;
+      --text: #0f172a;
+      --gap: 1rem;
+    }
+   
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Inter, system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      padding: 1rem;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      background: var(--card);
+      border-radius: 12px;
+      box-shadow: 0 8px 30px rgba(15, 23, 42, 0.08);
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      overflow: hidden;
+    }
+
+    .sidebar {
+      background: linear-gradient(180deg, var(--accent), var(--accent-2));
+      color: white;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: var(--gap);
+    }
+
+    .sidebar > div:first-child {
+      display: flex;
+      align-items: center;
+      gap: var(--gap);
+    }
+
+    .photo {
+      width: 96px;
+      height: 96px;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 3px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .title {
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .role {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+
+    .contact a {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      color: rgba(255, 255, 255, 0.95);
+      text-decoration: none;
+      transition: 0.2s;
+    }
+
+    .contact a:hover {
+      color: #fff;
+      transform: scale(1.05);
+    }
+
+    .social {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      font-size: 1.25rem;
+      justify-content: center;
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .skill {
+      flex: 1 1 120px;
+      background: #f3f6f8;
+      padding: 0.5rem;
+      border-radius: 8px;
+      font-size: 0.9rem;
+      color: var(--text);
+    }
+
+    .progress {
+      height: 8px;
+      background: #e6eef0;
+      border-radius: 999px;
+      margin-top: 0.5rem;
+      overflow: hidden;
+    }
+
+    .progress > span {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, var(--accent), var(--accent-2));
+    }
+
+    main {
+      padding: 2rem;
+    }
+
+    .section {
+      margin-bottom: 1.25rem;
+    }
+
+    .section h2 {
+      font-size: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .job {
+      border-left: 3px solid var(--accent);
+      padding: 0.6rem 0 0.6rem 0.8rem;
+      margin-bottom: 0.6rem;
+    }
+
+    .job time {
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    .job p {
+      margin-top: 0.35rem;
+      color: var(--muted);
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.75rem;
+    }
+
+    .project {
+      background: #fbfdff;
+      border: 1px solid #eef4f6;
+      padding: 0.75rem;
+      border-radius: 8px;
+    }
+
+    footer {
+      font-size: 0.85rem;
+      color: var(--muted);
+      margin-top: 1rem;
+    }
+
+    @media (max-width: 800px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1.5rem;
+      }
+
+      main {
+        padding: 1.5rem;
+      }
+    }
+
+    @media (max-width: 500px) {
+      body {
+        padding: 0.5rem;
+      }
+
+      .sidebar {
+        padding: 1rem;
+      }
+
+      main {
+        padding: 1rem;
+      }
+
+      .skills {
+        flex-direction: column;
+      }
+
+      .skill {
+        flex: 1 1 auto;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div>
+        <div class="photo">
+          <img src="https://avatars.githubusercontent.com/u/179221331?s=400&u=00132795fad0a66c3f37cd7619b181a73327d841&v=4" alt="Foto profissional de Alessandra Corrêa">
+        </div>
+        <div>
+          <div class="title">Alessandra Corrêa</div>
+          <div class="role">Desenvolvedor Front-end Júnior</div>
+        </div>
+      </div>
+
+      <div class="contact">
+        <div class="pill">📍 Fraiburgo, SC</div>
+        <div style="margin-top:0.5rem">
+          <div><strong>Email:</strong> <a href="mailto:elaine10032006@gmail.com">elaine10032006@gmail.com</a></div>
+          <div><strong>Tel:</strong> <a href="tel:+5549988448919">+55 49 988448919</a></div>
+          <div class="social">
+            <a href="https://github.com/AlekCorrea" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/alessandra-corr%C3%AAa-9539a2372/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <h3>Habilidades</h3>
+      <div class="skills">
+        <div class="skill">HTML
+          <div class="progress"><span style="width:95%"></span></div>
+        </div>
+        <div class="skill">CSS
+          <div class="progress"><span style="width:80%"></span></div>
+        </div>
+        <div class="skill">Java
+          <div class="progress"><span style="width:60%"></span></div>
+        </div>
+        <div class="skill">C
+          <div class="progress"><span style="width:80%"></span></div>
+        </div>
+      </div>
+    </aside>
+
+    <main>
+      <section class="section">
+        <h2>Resumo</h2>
+        <div class="summary">
+          <p>Tem atenção aos detalhes, foco em código limpo. Habilidade em resolução de problemas, boa comunicação e colaboração em equipes ágeis. Organizado, adaptável e sempre em aprendizado contínuo, com empatia pela experiência do usuário.</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Experiências</h2>
+        <article class="job">
+          <h3>Desenvolvedor Front-end</h3>
+          <p>Desenvolvimento de um sistema de cadastro em C usando Árvore AVL (projeto acadêmico). Implementação de uma calculadora em Java com JFrame (trabalho de curso). <br>Todos os projetos no github </p></article>
+      </section>
+
+      <section class="section">
+        <h2>Projetos Selecionados</h2>
+        <div class="projects">
+          <div class="project">
+            <strong>Controle de estoque de farmacia </strong>
+            <div class="muted">Lista de tarefas com filtro, persistência local e testes unitários.</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Formação</h2>
+        <div>
+          <strong>Concluido: Técnico em Informática — Instituto Federal Catarinense
+        </strong>
+          <div class="muted">2021 — 2023</div>
+            <strong>Em andamento : Bacharel em Ciências da Computação — Instituto Federal Catarinense</strong>
+            <div class="muted">2023 — </div>
+
+        </div>
+      </section>
+
+      <section class="section">
+        <h2>Hobbies</h2>
+        <ul>
+          <li>🎞️ Filmes</li>
+          <li>⚽ Esportes</li>
+          <li>🎵 Música</li>
+          <li>💻 Projetos pessoais de programação</li>
+        </ul>
+      </section>
+
+      <footer>
+        <div>Disponível para trabalho remoto e presencial.</div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
